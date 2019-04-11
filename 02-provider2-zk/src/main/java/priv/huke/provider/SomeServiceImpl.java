@@ -9,6 +9,7 @@ public class SomeServiceImpl implements SomeService {
         return "Hello Dubbo!" + name;
     }
 
+
     @Override
     public String doFirst() {
         System.out.println("执行提供者的doFirst");
