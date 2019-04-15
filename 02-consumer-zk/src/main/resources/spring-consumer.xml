@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo" xmlns="http://www.springframework.org/schema/beans"
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="02-provider2-zk"/>
+    <dubbo:application name="02-consumer-zk"/>
 
     <!--<dubbo:registry address="zookeeper://zkOS:2181"/>-->
     <!--<dubbo:registry protocol="zookeeper" address="zkOS:2181"/>-->
@@ -11,7 +11,6 @@
     <!--<dubbo:registry address="zookeeper://zkOS1:2181?backup=zkOS2:2181,zkOS3:2181,zkOS4:2181"/>-->
     <dubbo:registry protocol="zookeeper" address="zkOS1:2181,zkOS2:2181,zkOS3:2181,zkOS4:2181"/>
 
-    <bean id="somgServide" class="priv.huke.provider.SomeServiceImpl"/>
-    
-    <dubbo:service interface="priv.huke.common.SomeService" ref="somgServide"/>
+    <dubbo:reference id="someService" check="false" interface="priv.huke.common.SomeService"/>
+
 </beans>

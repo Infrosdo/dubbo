@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,7 +12,7 @@
     </properties>
 
     <groupId>priv.huke</groupId>
-    <artifactId>02-provider2-zk</artifactId>
+    <artifactId>02-consumer-zk</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -22,12 +22,6 @@
             <artifactId>00-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>cn.jpush.api</groupId>
-            <artifactId>jpush-client</artifactId>
-            <version>3.3.8</version>
-        </dependency>
-        <!-- zk客户端依赖：curator-framework -->
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
@@ -87,4 +81,5 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
+
 </project>
